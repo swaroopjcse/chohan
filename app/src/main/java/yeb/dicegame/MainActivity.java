@@ -85,22 +85,7 @@ public class MainActivity extends AppCompatActivity {
      * @return the new number of coins
      */
     private int calculateCoins(TextView txtCoins, EditText editWager, @NonNull SwitchCompat switchOddEven) {
-        int coins = getIntFromTextView(txtCoins);
-        int wager = getIntFromTextView(editWager);
-        boolean betForEven = switchOddEven.isChecked();
-
-        int diceSum = d1.value() + d2.value();
-
-        boolean win = (betForEven && isEven(diceSum)) || (!betForEven && !isEven(diceSum));
-
-        if (win) {
-            showToast("Congratulations!");
-            coins += wager;
-        } else {
-            showToast("Aww! Try again!");
-            coins -= wager;
-        }
-        return coins;
+        return 0;
     }
 
     /**
