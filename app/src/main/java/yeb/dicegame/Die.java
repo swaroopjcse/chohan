@@ -3,8 +3,8 @@ package yeb.dicegame;
 import java.util.Random;
 
 public class Die {
-    Random rng;
-    int value;
+    private final Random rng;
+    private int value;
 
     public Die() {
         rng = new Random();

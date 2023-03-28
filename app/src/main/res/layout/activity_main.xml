@@ -86,14 +86,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/odd"
-        app:layout_constraintEnd_toStartOf="@+id/switch1"
+        app:layout_constraintEnd_toStartOf="@+id/switch_odd_even"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_d1" />
 
     <androidx.appcompat.widget.SwitchCompat
-        android:id="@+id/switch1"
+        android:id="@+id/switch_odd_even"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minHeight="48dp"
@@ -109,10 +109,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/even"
-        app:layout_constraintBottom_toBottomOf="@+id/switch1"
+        app:layout_constraintBottom_toBottomOf="@+id/switch_odd_even"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/switch1"
-        app:layout_constraintTop_toTopOf="@+id/switch1" />
+        app:layout_constraintStart_toEndOf="@+id/switch_odd_even"
+        app:layout_constraintTop_toTopOf="@+id/switch_odd_even" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
