@@ -28,7 +28,20 @@ public class MainActivity extends AppCompatActivity {
             EditText editWager = findViewById(R.id.edit_wager);
             int wager = getIntFromEditText(editWager);
 
+            d1.roll();
+            d2.roll();
+
+            calculateCoins();
+            updateUI();
         });
+    }
+
+
+    private void calculateCoins() {
+
+    }
+
+    private void updateUI() {
     }
 
     private int getIntFromEditText(EditText editText) {

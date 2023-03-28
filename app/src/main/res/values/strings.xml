@@ -4,4 +4,6 @@
     <string name="coins_label">Coins</string>
     <string name="wager_hint">Coins to wager</string>
     <string name="play">Play</string>
+    <string name="odd">Odd</string>
+    <string name="even">Even</string>
 </resources>
