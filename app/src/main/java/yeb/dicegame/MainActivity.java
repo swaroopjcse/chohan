@@ -33,11 +33,34 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * Get all references for all relevant view elements.
+     */
+    private void getAllViewElements() {
+        btnPlay = findViewById(R.id.btn_play);
+        txtD1 = findViewById(R.id.txt_d1);
+        txtD2 = findViewById(R.id.txt_d2);
+        txtCoins = findViewById(R.id.txt_coins);
+        switchOddEven = findViewById(R.id.switch_odd_even);
+        editWager = findViewById(R.id.edit_wager);
+    }
+
+    /**
      * Creates new instances of the two dice.
      */
     private void setNewDice() {
         d1 = new Die();
         d2 = new Die();
+    }
+
+    /**
+     * Update the UI to display the given number as the number of coins the player has at this point.
+     */
+    private void updateUI(int numCoins) {
+        showIntOnATextView(txtD1, d1.value());
+        showIntOnATextView(txtD2, d2.value());
+        showIntOnATextView(txtCoins, numCoins);
+
+        editWager.setText("");
     }
 
     /**
@@ -51,18 +74,6 @@ public class MainActivity extends AppCompatActivity {
             int newCoins = calculateCoins(txtCoins, editWager, switchOddEven);
             updateUI(newCoins);
         });
-    }
-
-    /**
-     * Get all references for all relevant view elements.
-     */
-    private void getAllViewElements() {
-        btnPlay = findViewById(R.id.btn_play);
-        txtD1 = findViewById(R.id.txt_d1);
-        txtD2 = findViewById(R.id.txt_d2);
-        txtCoins = findViewById(R.id.txt_coins);
-        switchOddEven = findViewById(R.id.switch_odd_even);
-        editWager = findViewById(R.id.edit_wager);
     }
 
     /**
@@ -93,15 +104,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Shows the given message as a toast on the screen.
-     *
-     * @param message message to display
-     */
-    private void showToast(String message) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
-    }
-
-    /**
      * Reports whether the given non-negative integer is even.
      *
      * @param num the number to check for evenness
@@ -112,14 +114,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Update the UI to display the given number as the number of coins the player has at this point.
+     * Shows the given message as a toast on the screen.
+     *
+     * @param message message to display
      */
-    private void updateUI(int numCoins) {
-        showIntOnATextView(txtD1, d1.value());
-        showIntOnATextView(txtD2, d2.value());
-        showIntOnATextView(txtCoins, numCoins);
-
-        editWager.setText("");
+    private void showToast(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
     /**
