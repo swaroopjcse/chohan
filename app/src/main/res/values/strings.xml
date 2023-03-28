@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DiceGame</string>
+    <string name="zero">0</string>
+    <string name="coins_label">Coins</string>
+    <string name="wager_hint">Coins to wager</string>
+    <string name="play">Play</string>
+</resources>
