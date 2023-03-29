@@ -98,6 +98,12 @@ Now, get whether the player bet for the sum to be even by adding this line next:
 
         boolean betForEven = switchOddEven.isChecked();
 
+### Get the sum of the dice faces
+
+Now add this line
+
+        int diceSum = d1.value() + d2.value();
+
 ### Calculate the resulting coins
 
 First, let's check whether the player has won.
@@ -130,5 +136,6 @@ Try running your app now. It should work as expected.
 
 1. Let's raise the stakes: if the player wins, she gets twice the amount she bet; if she loses, she loses twice the amount she bet. How will you implement this change?
 2. It will be nice to get a message on whether the player won or lost. Look up Toasts in Android and add the functionality.
-3. What happens if you rotate the phone in the middle of the game play? Is this an expected behaviour? To fix this, we will have to create multiple files and write a lot of additional code. Creating a working app is easy - creating a 'good'
+3. Can you identify some bugs in the game? Bug is an unexpected behavior. Note them down and discuss with your partner how you can fix those.
+4. What happens if you rotate the phone in the middle of the game play? Is this an expected behaviour? To fix this, we will have to create multiple files and write a lot of additional code. Creating a working app is easy - creating a 'good'
  app is very difficult.
